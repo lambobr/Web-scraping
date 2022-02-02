@@ -2,7 +2,7 @@ import scrapy
 
 class WhiskeySpider(scrapy.Spider):
     name = 'whiskeyv2'
-    allowed_domains = ['whiskyshop.com']
+    #allowed_domains = ['whiskyshop.com']
     start_urls = ['https://www.whiskyshop.com/catalogsearch/result/index/?item_availability=In+Stock&q=scotch+whisky']
 
     def parse(self, response):
