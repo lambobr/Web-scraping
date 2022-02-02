@@ -12,7 +12,7 @@ class WhiskeySpider(scrapy.Spider):
         for product in products:
             try:
                 yield {     #yield is the return equivalent
-                    'product_name' : product.css('a.product-item-link::text').get(),
+                    'product_name' : product.css('a.product-item-link::text').get(),                #item attributes are directly used in css selector for scrapy...spaces are replaced with dot
                     'product_price' : product.css('span.price::text').get(),
                     'product_link' : product.css('a.product-item-link').attrib['href']
                 }
